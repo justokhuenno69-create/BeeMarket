@@ -156,13 +156,10 @@ function hlGoTo(i){
   var idx2=0, timer2=null, paused2=false;
   function show2(i){
     var slides=document.querySelectorAll('.hc2-slide');
-    var dots=document.querySelectorAll('.hc2-dots span');
     if(!slides.length) return;
     slides[idx2].classList.remove('active');
-    dots[idx2].classList.remove('active');
     idx2=(i+slides.length)%slides.length;
     slides[idx2].classList.add('active');
-    dots[idx2].classList.add('active');
   }
   window.hc2Go=function(i){ show2(i); };
   window.hc2Toggle=function(btn){
